@@ -1,0 +1,9 @@
+{% if store_list %}
+    <ul>
+    {% for store in store_list %}
+        <li>{{ store.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>There are no stores registered in this cyberspace.</p>
+{% endif %}

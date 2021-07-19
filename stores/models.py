@@ -13,9 +13,11 @@ class Country(models.Model):
 
 class Store(models.Model):
     name = models.CharField(max_length=150)
-    picture = models.ImageField(max_length=200, upload_to="media/")
+    picture = models.ImageField(max_length=200, upload_to="media/", blank=True)
     address = models.CharField(max_length=200)
-    googlemaps_link = models.CharField(max_length=200)  # Link to googlemap position
+    googlemaps_link = models.CharField(
+        max_length=200, blank=True
+    )  # Link to googlemap position
     website = models.CharField(max_length=200)
     country = models.ForeignKey(Country, models.SET_NULL, blank=True, null=True)
 
