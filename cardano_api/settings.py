@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-import django-heroku
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -26,7 +26,7 @@ SECRET_KEY = os.environ["CARDANO_API_SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['cardano-api-test2.herokuapp.com']
+ALLOWED_HOSTS = ["cardano-api-test2.herokuapp.com"]
 
 
 # Application definition
