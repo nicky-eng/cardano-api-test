@@ -1,9 +1,20 @@
-{% if store_list %}
-    <ul>
-    {% for store in store_list %}
-        <li>{{ store.name }}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>There are no stores registered in this cyberspace.</p>
-{% endif %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cardano Testing</title>
+  </head>
+  <body>
+    <h1>Welcome!</h1>      
+        
+    {% if store_list %}
+        <ul>
+        {% for store in store_list %}
+            <li>{{ store.name }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no stores registered in this cyberspace.</p>
+    {% endif %}
+  </body>
+</html>
