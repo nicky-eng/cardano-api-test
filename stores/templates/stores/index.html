@@ -5,12 +5,15 @@
     <title>Cardano Testing</title>
   </head>
   <body>
-    <h1>Welcome!</h1>      
+    <h1>Welcome!</h1>
+
         
     {% if store_list %}
         <ul>
         {% for store in store_list %}
             <li>{{ store.name }}</li>
+            <li><img src="{{ store.picture.url }}"></li>
+            <br><br><br><br>
         {% endfor %}
         </ul>
     {% else %}
