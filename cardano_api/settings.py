@@ -127,4 +127,10 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
+DEFAULT_FILE_STORAGE = "storages.backends.dropbox.DropBoxStorage"
+
 django_heroku.settings(locals())
+
+# To Access Dropbox as media server
+
+DROPBOX_OAUTH2_TOKEN = os.environ["DROPBOX_OAUTH2_TOKEN"]
